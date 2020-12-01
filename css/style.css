@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+}
+body {
+    background: #1E2D3B;
+    min-height: 100vh;
+}
+ul{
+    list-style: none;
+}
+.c-flex{
+    display: flex;
+}
+.container {
+    width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+}
+header {
+    width: 100%;
+    height: 70px;
+    background: rgb(46, 58, 70);
+}
+header img {
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 15%;
+}
+.container img{
+    width: 150px;
+}
+.container h3{
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+.container select{
+    color: white;
+    width: 180px;
+    height: 40px;
+    background-color: #1E2D3B;
+    margin-bottom: 20px;
+}
+.container select option{
+    color: white;
+    font-size: 20px;
+}
+.container .song{
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 250px;
+    height: 250px;
+    background: rgb(46, 58, 70);
+}
+ul{
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}

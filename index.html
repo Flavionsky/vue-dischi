@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+		<!-- JS Frameworks -->
+
+    <!-- Vue 2.6.12 -->
+    <script src="libs/vue.js" charset="utf-8"></script>
+    <!-- Axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
+
+		<!-- Custom CSS -->
+
+		<link rel="stylesheet" href="css/style.css">
+
+
+    <title>Songs</title>
+  </head>
+  <body>
+    <header>
+      <img src="img/logo.png" alt="">
+    </header>
+    <div class="container">
+      <div id="app">
+        <!-- select con v-model che prenderà il valore dell'opzione selezionata -->
+        <select v-model="genSel">
+          <option value="All">
+            All
+          </option>
+          <option value="Rock">
+            Rock
+          </option>
+          <option value="Pop">
+            Pop
+          </option>
+          <option value="Jazz">
+            Jazz
+          </option>
+          <option value="Metal">
+            Metal
+          </option>
+      </select>
+        <ul class="c-flex">
+          <!-- output del mio array filtrato a seconda dell'opzione che verrà verificata tramite il valore selezionato nella select -->
+          <li class="song" v-for="music in filterGenre">
+            <h3>
+              {{music.title}}
+            </h3>
+            <p>
+              {{music.author}}
+            </p>
+            <p>
+              {{music.year}}
+            </p>
+            <img :src="music.poster" alt="">
+          </li>
+        </ul>
+      </div>
+    </div>
+  <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>
